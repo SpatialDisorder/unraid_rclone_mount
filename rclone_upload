@@ -28,12 +28,10 @@ ModSort="ascending" # "ascending" oldest files first, "descending" newest files 
 # Note: Again - remember to NOT use ':' in your remote name above
 
 # Bandwidth limits: specify the desired bandwidth in kBytes/s, or use a suffix b|k|M|G. Or 'off' or '0' for unlimited.  The script uses --drive-stop-on-upload-limit which stops the script if the 750GB/day limit is achieved, so you no longer have to slow 'trickle' your files all day if you don't want to e.g. could just do an unlimited job overnight.
-BWLimit1Time="01:00"
-BWLimit1="off"
-BWLimit2Time="08:00"
-BWLimit2="15M"
-BWLimit3Time="16:00"
-BWLimit3="12M"
+BWLimit1Time="07:00"
+BWLimit1="750"
+BWLimit2Time="23:00"
+BWLimit2="off"
 
 # OPTIONAL SETTINGS
 
@@ -180,7 +178,7 @@ fi
 	--exclude *.backup~* \
 	--exclude *.partial~* \
 	--drive-stop-on-upload-limit \
-	--bwlimit "${BWLimit1Time},${BWLimit1} ${BWLimit2Time},${BWLimit2} ${BWLimit3Time},${BWLimit3}" \
+	--bwlimit "${BWLimit1Time},${BWLimit1} ${BWLimit2Time},${BWLimit2}" \
 	--bind=$RCloneMountIP $DeleteEmpty
 
 # Delete old files from mount
