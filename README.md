@@ -94,6 +94,7 @@ Other users need to install rclone and use their preferred way to schedule cron 
 [gdrive]
 <br/>type = drive
 <br/>scope = drive
+<br/>service_account_file = /mnt/user/appdata/other/rclone/service_accounts/sa_gdrive.json
 <br/>team_drive = TEAM DRIVE ID
 <br/>server_side_across_configs = true
 
