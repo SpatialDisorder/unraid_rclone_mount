@@ -190,7 +190,7 @@ else
 		else
 			echo "$(date "+%d.%m.%Y %T") CRITICAL: ${RcloneRemoteName} mergerfs mount failed."
 			rm /mnt/user/appdata/other/rclone/remotes/$RcloneRemoteName/mount_running
-		exit
+			exit
 		fi
 	fi
 fi
