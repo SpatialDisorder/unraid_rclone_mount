@@ -29,10 +29,10 @@ ModSort="ascending" # "ascending" oldest files first, "descending" newest files 
 
 # Bandwidth limits: specify the desired bandwidth in kBytes/s, or use a suffix b|k|M|G. Or 'off' or '0' for unlimited.  The script uses --drive-stop-on-upload-limit which stops the script if the 750GB/day limit is achieved, so you no longer have to slow 'trickle' your files all day if you don't want to e.g. could just do an unlimited job overnight.
 BWLimit1Time="07:00"
-BWLimit1="750"
-BWLimit2Time="23:00"
-BWLimit2="1000"
-BWLimit3Time="03:00"
+BWLimit1="20M"
+BWLimit2Time="22:00"
+BWLimit2="50M"
+BWLimit3Time="01:00"
 BWLimit3="off"
 
 # OPTIONAL SETTINGS
